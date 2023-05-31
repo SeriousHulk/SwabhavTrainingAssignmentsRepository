@@ -1,0 +1,26 @@
+﻿@using ContactDALLib.Model;
+@model List<Contact>
+<h2>Display All Contacts</h2>
+
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Mobile</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(Contact contact in Model) 
+    {
+        <tr>
+            <td scope="row">@contact.Id</td>
+            <td>@contact.Name</td>
+            <td>@contact.MobileNumber</td>
+        </tr>
+    }
+    </tbody>
+</table>
+

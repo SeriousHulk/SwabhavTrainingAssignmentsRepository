@@ -1,0 +1,25 @@
+<form [formGroup]="frmLogin">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">UserName</label>
+    <input
+      type="text"
+      formControlName="userName"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+    />
+    <p class="alert alert-danger" *ngIf="frmLogin.get('userName')?.invalid">user name is required</p>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" formControlName="userPassword" class="form-control" id="exampleInputPassword1" />
+    <p class="alert alert-danger" *ngIf="frmLogin.get('userPassword')?.invalid && frmLogin.get('userPassword')?.dirty">password is required</p>
+  </div>
+
+  <button type="submit" [disabled]="frmLogin.invalid" (click)="submitHandler()" class="btn btn-primary">Submit</button>
+  <h1>Form Status {{frmLogin.valid}}</h1>
+  <h1>UserName valid : {{frmLogin.get('userName')?.valid}}</h1>
+  <h1>UserName prestine : {{frmLogin.get('userName')?.pristine}}</h1>
+  <h1>Password valid : {{frmLogin.get('userPassword')?.valid}}</h1>
+  <h1>Password prestine : {{frmLogin.get('userPassword')?.pristine}}</h1>
+</form>

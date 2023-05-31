@@ -1,0 +1,29 @@
+﻿@using LoginMVCApp.ViewModel
+@model LoginVM
+
+<style>
+    .validation-summary-errors {
+        color: red
+    }
+</style>
+
+<script src="~/Scripts/jquery-1.8.0.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm(actionName: "Index", controllerName: "Login",
+    method: FormMethod.Post))
+{
+    <p>
+        UserName : @Html.TextBoxFor(m => m.UserName)
+    </p>
+    <p>
+        Password : @Html.PasswordFor(m => m.UserPassword)
+    </p>
+    if (Model != null)
+    {
+        <p style="color:red">@Model.Title</p>
+    }
+    <input type="submit" value="Login" />
+    <p>@Html.ValidationSummary()</p>
+}

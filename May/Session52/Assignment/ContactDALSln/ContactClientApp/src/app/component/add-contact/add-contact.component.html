@@ -1,0 +1,33 @@
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="">
+                <div class="">
+                    <div class="panel-heading">
+                        <h3 class="">Add Contact</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="addForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="addForm.controls['Name'].dirty && addForm.hasError('required','Name')">
+                                    <input formControlName="Name" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                            <small *ngIf="addForm.controls['Name'].dirty && addForm.hasError('required','Name')"
+                            class="text-danger"> *Name Required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="addForm.controls['MobileNumber'].dirty && addForm.hasError('required','MobileNumber')">
+                                    <input formControlName="MobileNumber" type="text" placeholder="MobileNumber">
+                                </div>
+                            </div>
+                            <small *ngIf="addForm.controls['MobileNumber'].dirty && addForm.hasError('required','MobileNumber')"
+                            class="text-danger"> *Mobile Number Required</small>
+                           
+                            <button type="submit" (click)="onAdd()" class="btn btn-primary btn-black mt-4 w-100">Add Contact</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactDbDLL", "ContactDALLib\ContactDbDLL.csproj", "{F157CF93-7D20-4972-9BC0-1C59B75A90DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactAppMVC_V2", "ContactAppMVC\ContactAppMVC_V2.csproj", "{0736AFB0-CE80-4C56-A4EE-78FC9176D960}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F157CF93-7D20-4972-9BC0-1C59B75A90DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F157CF93-7D20-4972-9BC0-1C59B75A90DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F157CF93-7D20-4972-9BC0-1C59B75A90DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F157CF93-7D20-4972-9BC0-1C59B75A90DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0736AFB0-CE80-4C56-A4EE-78FC9176D960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0736AFB0-CE80-4C56-A4EE-78FC9176D960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0736AFB0-CE80-4C56-A4EE-78FC9176D960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0736AFB0-CE80-4C56-A4EE-78FC9176D960}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C73DA0B-EB21-46AD-A712-38DE567EAA10}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferredExecutionPOC", "DeferredExecutionPOC\DeferredExecutionPOC.csproj", "{7AA1673B-C0CD-4F80-87BE-EF2CF0B6C270}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AA1673B-C0CD-4F80-87BE-EF2CF0B6C270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA1673B-C0CD-4F80-87BE-EF2CF0B6C270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA1673B-C0CD-4F80-87BE-EF2CF0B6C270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA1673B-C0CD-4F80-87BE-EF2CF0B6C270}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63577F06-8765-412D-9233-3D4A01823C86}
+	EndGlobalSection
+EndGlobal

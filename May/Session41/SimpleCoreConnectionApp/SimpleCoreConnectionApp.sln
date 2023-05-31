@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCoreConnectionApp", "SimpleCoreConnectionApp\SimpleCoreConnectionApp.csproj", "{CCA8667E-DBD1-41B0-80F4-C8DE18BD6C5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCA8667E-DBD1-41B0-80F4-C8DE18BD6C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA8667E-DBD1-41B0-80F4-C8DE18BD6C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA8667E-DBD1-41B0-80F4-C8DE18BD6C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA8667E-DBD1-41B0-80F4-C8DE18BD6C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6270A05-67E7-4F3C-9C4B-02AB658E7D3B}
+	EndGlobalSection
+EndGlobal

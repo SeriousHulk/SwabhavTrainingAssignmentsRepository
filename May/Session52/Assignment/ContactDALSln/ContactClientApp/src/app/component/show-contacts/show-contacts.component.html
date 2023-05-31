@@ -1,0 +1,28 @@
+<div class="">  
+    <div class="">  
+        <table class="table table-dark" >  
+            <thead>  
+                <tr>  
+                    <th>Id</th>  
+                    <th>Name</th>  
+                    <th>Mobile_Number</th>  
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>  
+            </thead>  
+            <tbody>  
+                <tr *ngFor="let contact of contacts">
+                    <td>{{contact.Id}}</td>   
+                    <td>{{contact.Name}}</td>
+                    <td>{{contact.MobileNumber}}</td>
+                     <td>  
+                        <button type="button" class="btn btn-black " routerLink="EditContact/{{contact.Id}}" style="margin-left: 50px; color: azure;">Edit this</button>
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-black " routerLink="DeleteContact/{{contact.Id}}" style="color: azure; margin-left: 10px;">X</button>  
+                    </td>   
+                 </tr>   
+            </tbody>  
+        </table>  
+    </div>  
+</div>   

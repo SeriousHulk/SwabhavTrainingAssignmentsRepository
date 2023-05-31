@@ -1,0 +1,19 @@
+﻿@using ContactAppMVC.ViewModel
+@model EditVM
+
+<style> .validation-summary-errors {color: red} </style>
+
+<script src="~/Scripts/jquery-1.8.0.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        <p>User Name : @Html.TextBoxFor(m => m.Name)</p>
+        <p>Mobile No. : @Html.TextBoxFor(m => m.Mobile)</p>
+        <input type="submit" value="Update Contact" />
+        <p>@Html.ValidationSummary()</p>
+    }
+</div>

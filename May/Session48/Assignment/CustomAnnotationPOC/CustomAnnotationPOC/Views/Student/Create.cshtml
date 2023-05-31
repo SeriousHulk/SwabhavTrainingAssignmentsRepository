@@ -1,0 +1,51 @@
+﻿@using CustomAnnotationPOC.Models
+@model Student
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div class="row">
+        <div class="col-lg-2">
+            @Html.LabelFor(a => a.Name)
+        </div>
+        <div class="col-lg-10">
+            @Html.TextBoxFor(a => a.Name)
+            <div>@Html.ValidationMessageFor(a => a.Name)</div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-2">
+            @Html.LabelFor(a => a.Email)
+        </div>
+        <div class="col-lg-10">
+            @Html.TextBoxFor(a => a.Email)
+            <div>@Html.ValidationMessageFor(a => a.Email)</div>
+
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-lg-2">
+            @Html.LabelFor(a => a.Birthdate)
+        </div>
+        <div class="col-lg-10">
+            @Html.TextBoxFor(a => a.Birthdate)
+            <div> @Html.ValidationMessageFor(a => a.Birthdate)</div>
+
+        </div>
+    </div>
+    <br />
+    <div class="row">
+
+        <div class="col-lg-offset-2">
+            <input type="submit" id="Submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </div>
+}

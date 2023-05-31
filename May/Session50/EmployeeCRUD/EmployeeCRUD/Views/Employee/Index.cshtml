@@ -1,0 +1,53 @@
+﻿@using EmployeeCRUD.ViewModels
+@model EmployeeVM
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<h1>@Model.Title</h1>
+
+
+<nav>
+    <p>
+        @if (Session["username"] == null)
+        {
+            <span>Guest </span>
+            @Html.ActionLink("Login", "Index", "Login")
+        }
+        else
+        { 
+            <span>Welcome, @Session["username"]</span>
+            <span>@Html.ActionLink("Log out", "LogOut", "Employee")</span>
+        }
+    </p>
+</nav>
+<p>
+    <h2>Current employee count: @Model.Count</h2>
+<p>
+    @Html.ActionLink("Add Employee", "Add", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SALARY</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    @foreach (var emp in Model.Employees)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Salary</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { emp.Id }, new { @class = "btn btn-info" })</td>
+            <td>@Html.ActionLink("X", "Delete", new { emp.Id }, new { @class = "btn btn-danger", onclick="return fnAreYOuSure()" })</td>
+        </tr>
+    }
+</table>
+
+<script>
+    function fnAreYOuSure() {
+        return confirm('Are you sure to Delete?')
+    }
+</script>

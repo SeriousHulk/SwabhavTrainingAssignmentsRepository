@@ -1,0 +1,19 @@
+<h2>Student Database</h2>
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th> CGPA </th>
+      <th>Remove Student</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.firstName }}</td>
+      <td>{{ student.lastName }}</td>
+      <td>{{ student.cgpa }}</td>
+      <td><button (click)="RemoveStudent()"></button></td>
+    </tr>
+  </tbody>
+</table>

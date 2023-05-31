@@ -1,0 +1,43 @@
+﻿@using EmployeeMVCcoreCRUD.ViewModels
+@model EmployeeVM
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@*<h1>@Model.Title</h1>*@
+<style>
+    .textR{
+        color:red
+    }
+
+    .textI {
+        color: aqua
+    }
+</style>
+<p>
+    <h2>Current employee count: @Model.Count</h2>
+<table class="container table table-dark">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SALARY</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+        @foreach (var emp in Model.Employees)
+        {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Salary</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { emp.Id }, new { @class = "textI btn btn-dark" })</td>
+            <td>@Html.ActionLink("Remove", "Delete", new { emp.Id }, new { @class = "textR btn btn-dark", onclick="return fnAreYOuSure()"})</td>
+        </tr>
+        }
+</table>
+
+<script>
+    function fnAreYOuSure() {
+        return confirm('Are you sure to Delete?')
+    }
+</script>

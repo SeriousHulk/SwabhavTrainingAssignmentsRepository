@@ -1,0 +1,28 @@
+﻿@using EmployeeCRUD.ViewModels
+@model EmployeeVM
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<h1>@Model.Title</h1>
+
+<p>
+    <h2>Current employee count: @Model.Count</h2>
+<p>
+    @Html.ActionLink("Add Employee", "Add", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SALARY</th>
+        </tr>
+    </thead>
+    @foreach (var emp in Model.Employees)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Salary</td>
+        </tr>
+    }
+</table>

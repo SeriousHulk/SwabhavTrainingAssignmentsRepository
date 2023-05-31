@@ -1,0 +1,11 @@
+h1 {
+    color: green;
+    margin-top: 50px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+span {
+    color: cornflowerblue;
+    font-weight: bold;
+}

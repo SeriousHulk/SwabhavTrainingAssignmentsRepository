@@ -1,0 +1,62 @@
+﻿@model WebApplication1.ViewModels.PassbookViewModel
+
+@{
+    ViewBag.Title = "Passbook";
+}
+
+<h2>Welcome, @Model.Account.Name!</h2>
+
+<h4>Account Details:</h4>
+<hr />
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>ID</dt>
+        <dd>@Model.Account.Id</dd>
+        <dt>Name</dt>
+        <dd>@Model.Account.Name</dd>
+        <dt>Balance</dt>
+        <dd>@Model.Account.Balance</dd>
+    </dl>
+</div>
+
+<h4>Transaction History:</h4>
+<hr />
+
+@if (Model.Transactions.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Available Balance</th>
+                <th>Type</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaction in Model.Transactions)
+            {
+                <tr>
+                    <td>@transaction.Id</td>
+                    <td>@transaction.Name</td>
+                    <td>@transaction.Amount</td>
+                    <td>@transaction.AvailableBalance</td>
+                    <td>@transaction.Type</td>
+                    <td>@transaction.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No transactions found.</p>
+}
+
+<div>
+    @Html.ActionLink("Do Transaction", "DoTransaction", new { id = Model.Account.Id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Logout", "Logout", new { id = Model.Account.Id }, new { @class = "btn btn-primary" })
+</div>

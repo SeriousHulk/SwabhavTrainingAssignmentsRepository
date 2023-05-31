@@ -1,0 +1,8 @@
+<div>
+  <h2>Wish Component</h2>
+  <h3>Today is :{{ today | date : "medium" }}</h3>
+  Enter your Name <input #txtuser type="text" />
+  <input type="button" value="wish" (click)="wishHandler(txtuser.value)" />
+  <h3>{{ message }}</h3>
+  <h2>{{ message | snake : "L" }}</h2>
+</div>

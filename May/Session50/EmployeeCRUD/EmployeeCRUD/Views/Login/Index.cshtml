@@ -1,0 +1,25 @@
+﻿@using EmployeeCRUD.ViewModel
+@model LoginVM
+
+<style>
+    .validation-summary-errors {
+        color: red
+    }
+</style>
+
+@using (Html.BeginForm(actionName: "Index", controllerName: "Login",
+    method: FormMethod.Post))
+{
+    <p>
+        UserName : @Html.TextBoxFor(m => m.UserName)
+    </p>
+    <p>
+        Password : @Html.PasswordFor(m => m.UserPassword)
+    </p>
+    if (Model != null)
+    {
+        <p style="color:red">@Model.Title</p>
+    }
+    <input type="submit" value="Login" />
+    <p>@Html.ValidationSummary()</p>
+}

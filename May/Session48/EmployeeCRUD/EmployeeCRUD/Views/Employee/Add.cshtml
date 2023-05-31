@@ -1,0 +1,14 @@
+﻿@using EmployeeCRUD.ViewModels
+@model EmployeeAddVM
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <h1>@Model.Title</h1>
+
+    @using (Html.BeginForm())
+    {
+        <p>Id:@Html.TextBoxFor(m => m.EmployeeId)</p>
+        <p>Name  :@Html.TextBoxFor(m => m.EmployeeName)</p>
+        <p>Salary:@Html.TextBoxFor(m => m.EmployeeSalary)</p>
+        <input type="submit" value="Add" />
+    }
+</div>
